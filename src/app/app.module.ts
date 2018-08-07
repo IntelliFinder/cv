@@ -1,24 +1,28 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule }       from '@angular/core';
+import { BrowserModule }  from '@angular/platform-browser';
+import { FormsModule }    from '@angular/forms';
 
-import { AppComponent } from './app.component';
-import { ExpComponent } from './exp/exp.component';
-import { EduComponent } from './edu/edu.component';
-import { AppRoutingModule } from './app-routing.module';
-import { GenComponent } from './gen/gen.component';
+import { AppComponent }         from './app.component';
+import { DashboardComponent }   from './dashboard/dashboard.component';
+import { HeroDetailComponent }  from './hero-detail/hero-detail.component';
+import { HeroesComponent }      from './heroes/heroes.component';
+import { MessagesComponent }    from './messages/messages.component';
+
+import { AppRoutingModule }     from './app-routing.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ExpComponent,
-    EduComponent,
-    GenComponent
-  ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes),
+    FormsModule,
+    AppRoutingModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    DashboardComponent,
+    HeroesComponent,
+    HeroDetailComponent,
+    MessagesComponent
+  ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
