@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GenComponent }      from './gen/gen.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  const routes: Routes = [
+    { path: 'general', component: GenComponent }
+  ];
+
 }
