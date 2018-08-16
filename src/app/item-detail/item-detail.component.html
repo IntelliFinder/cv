@@ -1,6 +1,6 @@
 <div *ngIf="item">
   <h2>{{item.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{item.id}}</div>
+  <div hidden><span>id: </span>{{item.id}}</div>
   <div *ngIf="item.desc != ''" ><span>description: </span>{{item.desc}}</div>
   <div *ngIf="item.time != ''" ><span>duration: </span>{{item.time}}</div>
   <div *ngIf="item.link != ''"><span>link: </span>{{item.link}}</div>

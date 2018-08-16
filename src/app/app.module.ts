@@ -11,15 +11,25 @@ import { ItemComponent } from './item/item.component';
 import { ItemDetailComponent } from './item-detail/item-detail.component';
 
 import { AppRoutingModule }     from './app-routing.module';
+import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { NavComponent } from './nav/nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    MaterialModule,
+    BrowserAnimationsModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   declarations: [
     AppComponent,
@@ -28,7 +38,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HeroDetailComponent,
     MessagesComponent,
     ItemComponent,
-    ItemDetailComponent
+    ItemDetailComponent,
+    NavComponent
   ],
   bootstrap: [ AppComponent ]
 })
