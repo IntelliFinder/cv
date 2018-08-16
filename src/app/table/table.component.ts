@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort } from '@angular/material';
-import { TableDataSource } from './table-datasource';
-
+import { PLDataSource } from './pl-datasource';
+import { AwardDataSource } from './awards-datasource';
+import { LangDataSource } from './lang-datasource';
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
@@ -10,12 +11,16 @@ import { TableDataSource } from './table-datasource';
 export class TableComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
-  dataSource: TableDataSource;
+  dataSource: PLDataSource;
+  langDataSource: LangDataSource;
+  awardDataSource: AwardDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = ['id', 'name'];
 
   ngOnInit() {
-    this.dataSource = new TableDataSource(this.paginator, this.sort);
+    this.dataSource = new PLDataSource(this.paginator, this.sort);
+    this.awardDataSource = new AwardDataSource(this.paginator, this.sort);
+    this.langDataSource = new LangDataSource(this.paginator, this.sort);
   }
 }
